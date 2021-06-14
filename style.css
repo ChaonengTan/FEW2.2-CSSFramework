@@ -1,11 +1,22 @@
 :root {
-    --element-color: cornflowerblue;
-    --element-background: rgb(204, 204, 204);
+    --color-primary: cornflowerblue;
+    --color-background: rgb(204, 204, 204);
+    --color-foreground: rgb(31, 31, 31);
+    --color-dark: black;
+    --color-light: white;
+    --color-md-dark: rgb(26, 26, 26);
+    --color-md-light: rgb(235, 235, 235);
+    --color-info: blue;
+    --color-success: rgb(81, 255, 81);
+    --color-danger: red;
+    --color-callout: orange;
+    --color-lightest: white;
 }
 
 body {
     font-family: 'Times New Roman', Times, serif;
     font-size: 18px;
+    margin: 0;
 }
 
 /* typography */
@@ -15,16 +26,80 @@ h3 { font-size: 1.75rem; }
 h4 { font-size: 1.5rem; }
 h5 { font-size: 1.25rem; }
 h6 { font-size: 1rem; }
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
 
 a {
-    color: var(--element-color);
+    color: var(--color-primary);
 }
 
 button {
     padding: .5rem .8rem;
     font-size: 1rem;
     border: none;
-    background-color: var(--element-color);
+    background-color: var(--color-primary);
     color: white;
     margin: 0;
+}
+
+/* form styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+label {
+    display: flex;
+    flex-direction: column;
+}
+input, textarea {
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--color-foreground);
+    font-size: .8rem;
+    padding: .4rem;
+    box-shadow: 0 0 2px rgba(0, 0, 0, .5);
+}
+
+/* navbar styles */
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: var(--color-background);
+}
+.navbar ul{
+    list-style: none;
+}
+.navbar li {
+    margin-right: .5rem;
+}
+.navbar>* {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.navbar>*>* {
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* footer style */
+.page-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: var(--color-background);
+    margin-top: 1rem;
+}
+.page-footer ul {
+    list-style: none;
+}
+.page-footer>* {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin-bottom: 1rem;
 }
