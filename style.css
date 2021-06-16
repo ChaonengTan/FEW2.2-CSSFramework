@@ -35,13 +35,20 @@ a {
 }
 
 button {
+    --button-color: var(--color-light);
+    --button-bg: var(--color-primary);
+
     padding: .5rem .8rem;
     font-size: 1rem;
     border: none;
-    background-color: var(--color-primary);
-    color: var(--color-light);
+    background-color: var(--button-bg);
+    color: var(--button-color);
     margin: 0;
 }
+button.info { --button-bg:var(--color-info) }
+button.success { --button-bg:var(--color-success) }
+button.danger { --button-bg:var(--color-danger) }
+button.callout { --button-bg:var(--color-callout) }
 
 /* form styles */
 form {
