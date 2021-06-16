@@ -83,7 +83,20 @@ input, textarea {
     display: flex;
     flex-direction: row;
 }
-
+/* Card Styles */
+.card {
+    display: flex;
+    flex-direction: column;
+    max-width: min-content;
+    height: auto;
+    border: solid 1px var(--color-foreground);
+}
+.card p {
+    margin: 0;
+    padding: 1rem;
+    background-color: var(--color-foreground);
+    color: var(--color-background);
+}
 
 /* footer style */
 .page-footer {
