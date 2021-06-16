@@ -39,7 +39,7 @@ button {
     font-size: 1rem;
     border: none;
     background-color: var(--color-primary);
-    color: white;
+    color: var(--color-light);
     margin: 0;
 }
 
@@ -53,9 +53,7 @@ label {
     flex-direction: column;
 }
 input, textarea {
-    border-width: 2px;
-    border-style: solid;
-    border-color: var(--color-foreground);
+    border: 2px solid var(--color-foreground);
     font-size: .8rem;
     padding: .4rem;
     box-shadow: 0 0 2px rgba(0, 0, 0, .5);
