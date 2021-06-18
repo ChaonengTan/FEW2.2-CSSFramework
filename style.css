@@ -67,26 +67,32 @@ input, textarea {
 }
 
 /* navbar styles */
+.navbar>*>* {
+    display: flex;
+    flex-direction: row;
+}
 .navbar {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     background-color: var(--color-background);
 }
-.navbar ul{
-    list-style: none;
-}
-.navbar li {
-    margin-right: .5rem;
-}
+.navbar ul{ list-style: none; }
+.navbar li { margin-right: .5rem; }
 .navbar>* {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: baseline;
+    padding: .5rem;
 }
-.navbar>*>* {
-    display: flex;
-    flex-direction: row;
+.navbar:nth-child(1) { align-items: center; }
+.navbar a {
+    text-decoration: none;
+    color: var(--color-foreground);
+}
+.navbar a:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
 }
 /* Card Styles */
 .card {
