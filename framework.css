@@ -37,7 +37,7 @@ a {
     color: var(--color-primary);
 }
 
-button {
+button, input[type=button], input[type=submit] {
     --button-color: var(--color-light);
     --button-bg: var(--color-primary);
 
@@ -48,38 +48,41 @@ button {
     color: var(--button-color);
     margin: 0;
 }
-button.info { --button-bg:var(--color-info) }
-button.success { --button-bg:var(--color-success) }
-button.danger { --button-bg:var(--color-danger) }
-button.callout { --button-bg:var(--color-callout) }
-
-input[type=button] {
-    padding: .5rem .8rem;
-    font-size: 1rem;
-    border: none;
-    background-color: var(--button-bg);
-    color: var(--button-color);
-    margin: 0;
-}
-input[type=button].info { --button-bg:var(--color-info) }
-input[type=button].success { --button-bg:var(--color-success) }
-input[type=button].danger { --button-bg:var(--color-danger) }
-input[type=button].callout { --button-bg:var(--color-callout) }
+button.info, input[type=button].info, input[type=submit].info { --button-bg:var(--color-info) }
+button.success, input[type=button].success, input[type=submit].success { --button-bg:var(--color-success) }
+button.danger, input[type=button].danger, input[type=submit].danger { --button-bg:var(--color-danger) }
+button.callout, input[type=button].callout, input[type=submit].callout { --button-bg:var(--color-callout) }
 
 /* form styles */
 form {
     display: flex;
     flex-direction: column;
 }
-label {
+form label {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+}
+form label span {
+    padding-right: .3rem;
 }
 input, textarea {
     border: 2px solid var(--color-foreground);
     font-size: .8rem;
     padding: .4rem;
     box-shadow: 0 0 2px rgba(0, 0, 0, .5);
+}
+input[type=text], input[type=tel], input[type=search], input[type=password], input[type=number], input[type=email], textarea{
+    width: 100vw;
+}
+input[type=submit], button[type=submit] {
+    align-self: flex-end;
+  }
+  
+/* radio checkboxes */
+.radio>*, .checkbox>* {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 /* navbar styles */
