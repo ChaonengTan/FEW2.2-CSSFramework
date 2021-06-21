@@ -11,6 +11,9 @@
     --color-danger: red;
     --color-callout: orange;
     --color-lightest: white;
+
+    --color-nav-foreground: white;
+    --color-nav-background: cornflowerblue;
 }
 
 body {
@@ -50,6 +53,19 @@ button.success { --button-bg:var(--color-success) }
 button.danger { --button-bg:var(--color-danger) }
 button.callout { --button-bg:var(--color-callout) }
 
+input[type='button'] {
+    padding: .5rem .8rem;
+    font-size: 1rem;
+    border: none;
+    background-color: var(--button-bg);
+    color: var(--button-color);
+    margin: 0;
+}
+input[type='button'].info { --button-bg:var(--color-info) }
+input[type='button'].success { --button-bg:var(--color-success) }
+input[type='button'].danger { --button-bg:var(--color-danger) }
+input[type='button'].callout { --button-bg:var(--color-callout) }
+
 /* form styles */
 form {
     display: flex;
@@ -75,7 +91,7 @@ input, textarea {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    background-color: var(--color-background);
+    background-color: var(--color-nav-background);
 }
 .navbar ul{ list-style: none; }
 .navbar li { margin-right: .5rem; }
@@ -88,10 +104,10 @@ input, textarea {
 .navbar:nth-child(1) { align-items: center; }
 .navbar a {
     text-decoration: none;
-    color: var(--color-foreground);
+    color: var(--color-nav-foreground);
 }
 .navbar a:hover {
-    color: var(--color-primary);
+    color: var(--color-callout);
     text-decoration: underline;
 }
 /* Card Styles */
@@ -116,9 +132,13 @@ input, textarea {
     justify-content: space-around;
     background-color: var(--color-background);
     margin-top: 1rem;
+    padding: 2rem 0;
 }
 .page-footer ul {
     list-style: none;
+}
+.page-footer h1, .page-footer h2, .page-footer h3, .page-footer h4, .page-footer h5, .page-footer h6 {
+    color: var(--color-info);
 }
 .page-footer>* {
     display: flex;
@@ -126,4 +146,11 @@ input, textarea {
     align-items: center;
     padding: 0;
     margin-bottom: 1rem;
+}
+.page-footer a {
+    color: var(--color-primary);
+}
+.page-footer a:hover {
+    color: var(--color-callout);
+    text-decoration: underline;
 }
