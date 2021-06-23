@@ -85,6 +85,41 @@ input[type=submit], button[type=submit] {
     flex-direction: row;
     align-items: center;
 }
+/* custom switch */
+div.switch {
+    display: flex;
+    align-items: center;
+}
+input[class=switch] {
+    display: none;
+}
+input[type=checkbox]+label.switch{
+    width: 50px;
+    height: 30px;
+    display: block;
+    background-color: #ddd;
+    border-radius: 30px;
+    position: relative;
+    transition: 200ms;
+}
+input[type=checkbox]+label.switch::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 26;
+    height: 26;
+    border-radius: 50%;
+    background-color: white;
+    left: 2px;
+    top: 2px;
+    transition: 200ms;
+}
+input[type=checkbox]:checked+label.switch::before {
+    left: 22;
+}
+input[type=checkbox]:checked+label.switch {
+    background-color: lime;
+}
 
 /* navbar styles */
 .navbar>*>* {
