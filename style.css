@@ -21,6 +21,7 @@ body {
     font-size: 18px;
     margin: 0;
     max-width: 100vw;
+    line-height: 1.5;
 }
 
 /* typography */
@@ -44,10 +45,15 @@ button, input[type=button], input[type=submit] {
 
     padding: .5rem .8rem;
     font-size: 1rem;
-    border: none;
+    border: var(--button-bg) solid 2px;
     background-color: var(--button-bg);
     color: var(--button-color);
     margin: 0;
+    transition: 200ms;
+}
+button:hover, input[type=button]:hover, input[type=submit]:hover {
+    background-color: var(--button-color);
+    color: var(--button-bg);
 }
 button.info, input[type=button].info, input[type=submit].info { --button-bg:var(--color-info) }
 button.success, input[type=button].success, input[type=submit].success { --button-bg:var(--color-success) }
