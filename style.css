@@ -150,9 +150,10 @@ input[type=checkbox]:checked+label.switch {
 .navbar a {
     text-decoration: none;
     color: var(--color-nav-foreground);
+    transition: 150ms;
 }
 .navbar a:hover {
-    color: var(--color-callout);
+    color: var(--color-dark);
     text-decoration: underline;
 }
 /* Card Styles */
@@ -162,6 +163,7 @@ input[type=checkbox]:checked+label.switch {
     max-width: min-content;
     height: auto;
     border: solid 1px var(--color-foreground);
+    box-shadow: 2px 2px 8px var(--color-dark);
 }
 .card p {
     margin: 0;
@@ -194,8 +196,9 @@ input[type=checkbox]:checked+label.switch {
 }
 .page-footer a {
     color: var(--color-primary);
+    transition: 150ms;
 }
 .page-footer a:hover {
-    color: var(--color-callout);
+    color: var(--color-dark);
     text-decoration: underline;
 }
