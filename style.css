@@ -86,10 +86,43 @@ input[type=submit], button[type=submit] {
   }
   
 /* radio checkboxes */
-.radio>*, .checkbox>* {
+/* .radio>*, .checkbox>* {
     display: flex;
     flex-direction: row;
     align-items: center;
+} */
+/* custom checkbox */
+div.checkbox {
+    display: flex;
+    align-items: center;
+}
+input[class=checkbox] {
+    display: none;
+}
+input[type=checkbox]+label.checkbox{
+    width: 15px;
+    height: 15px;
+    display: block;
+    background-color: rgba(0, 0, 0, 0);
+    border: var(--color-primary) 2px solid;
+    border-radius: 20%;
+    position: relative;
+    transition: 200ms;
+}
+input[type=checkbox]+label.checkbox::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 13;
+    height: 13;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 20%;
+    left: 1px;
+    top: 1px;
+    transition: 200ms;
+}
+input[type=checkbox]:checked+label.checkbox::before {
+    background-color: var(--color-primary);
 }
 /* custom radio */
 div.radio {
@@ -157,7 +190,7 @@ input[type=checkbox]:checked+label.switch::before {
     left: 22;
 }
 input[type=checkbox]:checked+label.switch {
-    background-color: lime;
+    background-color: var(--color-primary);
 }
 
 /* navbar styles */
