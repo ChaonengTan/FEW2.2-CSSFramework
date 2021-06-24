@@ -91,6 +91,39 @@ input[type=submit], button[type=submit] {
     flex-direction: row;
     align-items: center;
 }
+/* custom radio */
+div.radio {
+    display: flex;
+    align-items: center;
+}
+input[class=radio] {
+    display: none;
+}
+input[type=radio]+label.radio{
+    width: 15px;
+    height: 15px;
+    display: block;
+    background-color: rgba(0, 0, 0, 0);
+    border: var(--color-primary) 2px solid;
+    border-radius: 50%;
+    position: relative;
+    transition: 200ms;
+}
+input[type=radio]+label.radio::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 13;
+    height: 13;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0);
+    left: 1px;
+    top: 1px;
+    transition: 200ms;
+}
+input[type=radio]:checked+label.radio::before {
+    background-color: var(--color-primary);
+}
 /* custom switch */
 div.switch {
     display: flex;
